@@ -7,7 +7,7 @@ services:
 
 before_install:
   - echo "start creating an image with dockerfile"
-  - docker build -t upatisariputa/docker-app -f dockerfile.dev .
+  - docker build -t upatisariputa/docker-app -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true upatisariputa/docker-app npm run test -- --coverage
